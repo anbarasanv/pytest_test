@@ -1,0 +1,28 @@
+include requirements/*.txt
+include bikeshare_model/VERSION
+include bikeshare_model/config.yml
+
+# Include model pipeline file if it exists
+include bikeshare_model/trained_models/*.pkl
+
+# Include any data files used for testing
+include bikeshare_model/datasets/*.csv
+include bikeshare_model/datasets/*.json
+
+# Include documentation if any
+include *.md
+include LICENSE
+
+# Include all Python files
+recursive-include bikeshare_model *.py
+
+# Include any test data
+recursive-include tests *.csv
+recursive-include tests *.json
+
+# Exclude bytecode and cache directories
+global-exclude *.py[cod]
+global-exclude __pycache__/
+global-exclude *.so
+global-exclude .DS_Store
+

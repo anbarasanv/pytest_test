@@ -1,0 +1,53 @@
+# Data Files
+training_data_file: bike-sharing-dataset.csv
+# test_data_file: test.csv
+
+# Variables
+# The variable we are attempting to predict (Survival)
+target: cnt
+
+pipeline_name: bikeshare_model
+pipeline_save_file: bikeshare__model_output_v
+
+features:
+  - dteday
+  - season
+  - hr
+  - holiday
+  - weekday
+  - workingday
+  - weathersit
+  - temp
+  - atemp
+  - hum
+  - windspeed
+  - casual
+  - registered
+  - year
+  - month
+
+numeric_cols:
+  - temp
+  - atemp
+  - hum
+  - windspeed
+  - casual
+  - registered
+  - year
+  - month
+
+weekday_col: weekday
+
+dteday_col: dteday
+
+# Features inside processing pipeline
+
+# set train/test split
+test_size: 0.20
+
+# to set the random seed
+random_state: 42
+# alogrithm parameters
+n_estimators: 150
+max_depth: 5
+max_features: 3
